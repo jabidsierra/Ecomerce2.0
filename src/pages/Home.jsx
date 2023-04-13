@@ -74,7 +74,7 @@ const Home = () => {
           {
             products.map( product => (
               <Col className='mb-3' key={ product.id }>
-              <Card>
+              <Card Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={ product.images[0]?.url} style={{height: 300, objectFit: 'cover'}}/>
                 <Card.Body>
                   <Card.Title>{ product.title }</Card.Title>
