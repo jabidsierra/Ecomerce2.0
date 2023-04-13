@@ -23,7 +23,7 @@ const ProductDetail = () => {
   return (
     <div>
       <Card >
-      <Card.Img variant="top" src={ detail.images?.[0].url} style={{height: auto, objectFit: 'cover'}}/>
+      <Card.Img variant="top" src={ detail.images?.[0].url} style={{height: 150, objectFit: 'cover'}}/>
       <Card.Body>
         <Card.Title>{ detail.title }</Card.Title>
         <Card.Text>${ detail.price }</Card.Text>
