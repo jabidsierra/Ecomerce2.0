@@ -27,7 +27,7 @@ const ProductDetail = () => {
     <Container>
       <Row>
         <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
-        <Col sm={4}>{ detail.title }</Col>
+        <Col sm={4}>{ detail.title}</Col>
       </Row>
       <Row>
         <Col sm>${ detail.price }</Col>
