@@ -7,10 +7,12 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { createCartThunk } from "../store/slices/cart.slice";
 
 const ProductDetail = () => {
   const { id } = useParams()
   const [ detail, setDetail ] = useState({})
+  const [counter, setCounter] = useState(1);
   const dispatch = useDispatch()
  
   useEffect( () => {
@@ -22,6 +24,15 @@ const ProductDetail = () => {
       .finally( () => dispatch (setIsLoading( false ) ) )
   }, [])
 
+  const addChart = () => {
+    const data = {
+      rate: counter, //quantity
+      news: id //productId
+    };
+
+    dispatch(createCartThunk(data));
+  };
+
   return (
     <Container>
       <Row>
@@ -31,7 +42,11 @@ const ProductDetail = () => {
       <Row>
         <Col sm></Col>
         <Col sm></Col>
-        <Col sm>${ detail.price }   <Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
+        <Col sm>${ detail.price }   <Button onClick={addChart} variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
+        <Button onClick={() => setCounter(counter - 1)}>-</Button>
+          {counter}
+          <Button onClick={() => setCounter(counter + 1)}>+</Button>
+        </Col>
       </Row>
     </Container>
   );
