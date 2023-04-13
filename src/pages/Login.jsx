@@ -28,14 +28,13 @@ const Login = () => {
 
   return (
     <div>
-      Bienvenido, por favor ingresa tu usuario y contraseña
       <Form
         className='mx-3 p3'
         style={{ maxWidth: 500, margin: '1rem auto', border: '1px solid black', padding: '1rem'}}
         onSubmit={ handleSubmit( submit ) }
       >
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
@@ -44,7 +43,7 @@ const Login = () => {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -53,7 +52,7 @@ const Login = () => {
         </Form.Group>
         
       <Button variant="primary" type="submit">
-        Submit
+        Iniciar Sesión 
       </Button>
     </Form>
     </div>
