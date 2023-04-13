@@ -28,7 +28,7 @@ const ProductDetail = () => {
         <Card.Title>{ detail.title }</Card.Title>
         <Card.Text>${ detail.price }</Card.Text>
         <Card.Text className="text-muted mb-5 d-inline-block">{ detail.description }</Card.Text>
-        <Button variant="primary"><i className='bx bx-cart-add'></i> Add to cart...</Button>
+        <Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
       </Card.Body>
     </Card>
       
