@@ -10,12 +10,31 @@ const CartSidebar = ( { show, handleClose } ) => {
   useEffect( () => {
     dispatch( getCartThunk() ) 
   }, [])
+
+  const cart = useSelector((state) => state.cart);
+
   return (
     <Offcanvas show={show} onHide={handleClose} placement='end'>
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>CART</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
+
+      <ul>
+          {cart?.map((item) => (
+            <li
+              key={item.id}
+              style={{ border: "1px solid black", marginBottom: "1rem" }}
+            >
+              <h5>{item.title}</h5>
+              <img
+                style={{ width: 80, objectFit: "contain" }}
+                src={item.news?.image}
+                alt=""
+              />
+            </li>
+          ))}
+        </ul>
         
       </Offcanvas.Body>
     </Offcanvas>
