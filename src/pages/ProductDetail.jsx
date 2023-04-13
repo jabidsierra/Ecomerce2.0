@@ -30,9 +30,9 @@ const ProductDetail = () => {
         <Col sm={4}>{ detail.title} { detail.description }</Col>
       </Row>
       <Row>
-        <Col sm>${ detail.price }</Col>
-        <Col sm><Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
         <Col sm></Col>
+        <Col sm></Col>
+        <Col sm>${ detail.price }<Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
       </Row>
     </Container>
   );
