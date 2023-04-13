@@ -32,7 +32,7 @@ const ProductDetail = () => {
       <Row>
         <Col sm></Col>
         <Col sm></Col>
-        <Col sm>${ detail.price }<Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
+        <Col sm>${ detail.price }   <Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
       </Row>
     </Container>
   );
