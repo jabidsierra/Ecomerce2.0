@@ -35,7 +35,7 @@ const ProductDetail = () => {
 
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="left" src={ detail.images?.[0].url} />
+      <Card.Img variant="right" src={ detail.images?.[0].url} />
       <Card.Body>
         <Card.Title>{ detail.title}</Card.Title>
         <Card.Text>
