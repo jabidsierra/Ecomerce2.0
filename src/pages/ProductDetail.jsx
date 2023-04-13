@@ -5,6 +5,9 @@ import { setIsLoading } from '../store/slices/isLoading.slice'
 import { useDispatch } from 'react-redux'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -21,22 +24,17 @@ const ProductDetail = () => {
   }, [])
 
   return (
-    <div>
-      <Card style={{ width: '38rem' }}>
-      <Card.Img variant="top" src={ detail.images?.[0].url} />
-      <Card.Body>
-        <Card.Title>{ detail.title }</Card.Title>
-        <Card.Text>${ detail.price }</Card.Text>
-        <Card.Text className="text-muted mb-5 d-inline-block">{ detail.description }</Card.Text>
-        <Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
-      </Card.Body>
-    </Card>
-      
-      
-    </div>
+    <Container>
+      <Row>
+        <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
+        <Col sm={4}>{ detail.title }</Col>
+      </Row>
+      <Row>
+        <Col sm>${ detail.price }</Col>
+        <Col sm><Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
+        <Col sm>{ detail.description }</Col>
+      </Row>
+    </Container>
   );
 }
-
-export default ProductDetail;
-
 
