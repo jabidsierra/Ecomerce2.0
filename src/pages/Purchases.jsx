@@ -23,14 +23,13 @@ const Purchases = () => {
         >
           <Card.Img
             variant="left"
-            src={item.news?.image}
+            src={item.images[0]?.url}
             style={{ width: 150 }}
           />
           <Card.Body>
-            <Card.Title>{item.news?.headline}</Card.Title>
+            <Card.Title>{item.title}</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+            ${ product.price }
             </Card.Text>
           </Card.Body>
         </Card>
