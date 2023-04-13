@@ -37,7 +37,8 @@ const ProductDetail = () => {
     <Container>
       <Row>
         <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
-        <Col sm={4}>{ detail.title} { detail.description }</Col>
+        <Col sm={4}>{ detail.title} <br/>
+        { detail.description }</Col>
       </Row>
       <Row>
         <Col sm></Col>
