@@ -27,12 +27,12 @@ const ProductDetail = () => {
     <Container>
       <Row>
         <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
-        <Col sm={4}>{ detail.title}</Col>
+        <Col sm={4}>{ detail.title} { detail.description }</Col>
       </Row>
       <Row>
         <Col sm>${ detail.price }</Col>
         <Col sm><Button variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button></Col>
-        <Col sm>{ detail.description }</Col>
+        <Col sm></Col>
       </Row>
     </Container>
   );
