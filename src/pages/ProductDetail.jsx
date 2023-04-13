@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { createCartThunk } from "../store/slices/cart.slice";
-
+import Card from 'react-bootstrap/Card';
 const ProductDetail = () => {
   const { id } = useParams()
   const [ detail, setDetail ] = useState({})
@@ -34,22 +34,22 @@ const ProductDetail = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
-        <Col sm={4}>{ detail.title} { detail.description }</Col>
-      </Row>
-      <Row>
-        <Col sm></Col>
-        <Col sm></Col>
-        <Col sm>${ detail.price }   <Button onClick={addChart} variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="left" src={ detail.images?.[0].url} />
+      <Card.Body>
+        <Card.Title>{ detail.title}</Card.Title>
+        <Card.Text>
+        { detail.description }
+        </Card.Text>
+        <Button onClick={addChart} variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
         <Button onClick={() => setCounter(counter - 1)}>-</Button>
           {counter}
           <Button onClick={() => setCounter(counter + 1)}>+</Button>
-        </Col>
-      </Row>
-    </Container>
+      </Card.Body>
+    </Card>
   );
 }
 
 export default ProductDetail;
+
+
