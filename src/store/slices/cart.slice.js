@@ -24,7 +24,7 @@ export const getCartThunk = () => dispatch => {
 export const createCartThunk = (data) => (dispatch) => {
   axios
     .post(
-      "https://news-app-api.academlo.tech/news/add_to_favorite/",
+      "https://e-commerce-api-v2.academlo.tech/api/v1/cart",
       data,
       getConfig()
     )

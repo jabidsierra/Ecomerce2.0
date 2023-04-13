@@ -8,7 +8,7 @@ const Purchases = () => {
   const [purchases, setPurchases] = useState([]);
   useEffect(() => {
     axios
-      .get("https://news-app-api.academlo.tech/favorites/", getConfig())
+      .get("https://e-commerce-api-v2.academlo.tech/api/v1/purchases", getConfig())
       .then((resp) => setPurchases(resp.data))
       .catch((error) => console.error(error));
   }, []);
