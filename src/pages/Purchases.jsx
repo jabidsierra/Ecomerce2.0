@@ -23,13 +23,13 @@ const Purchases = () => {
         >
           <Card.Img
             variant="left"
-            src={item.images[0]?.url}
+            src={item.images?.[0].url}
             style={{ width: 150 }}
           />
           <Card.Body>
             <Card.Title>{item.title}</Card.Title>
             <Card.Text>
-            ${ product.price }
+            ${ item.price }
             </Card.Text>
           </Card.Body>
         </Card>
