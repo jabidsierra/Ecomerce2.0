@@ -22,8 +22,8 @@ const ProductDetail = () => {
 
   return (
     <div>
-      <Card >
-      <Card.Img variant="top" src={ detail.images?.[0].url} style={{height: 150, objectFit: 'cover'}}/>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={ detail.images?.[0].url} />
       <Card.Body>
         <Card.Title>{ detail.title }</Card.Title>
         <Card.Text>${ detail.price }</Card.Text>
@@ -38,3 +38,5 @@ const ProductDetail = () => {
 }
 
 export default ProductDetail;
+
+
