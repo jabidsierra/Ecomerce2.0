@@ -34,19 +34,21 @@ const ProductDetail = () => {
   };
 
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="right" src={ detail.images?.[0].url} />
-      <Card.Body>
-        <Card.Title>{ detail.title}</Card.Title>
-        <Card.Text>
-        { detail.description }
-        </Card.Text>
-        <Button onClick={addChart} variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
+    <Container>
+      <Row>
+        <Col sm={8}><img src={ detail.images?.[0].url} /></Col>
+        <Col sm={4}>{ detail.title} { detail.description }</Col>
+      </Row>
+      <Row>
+        <Col sm></Col>
+        <Col sm></Col>
+        <Col sm>${ detail.price }   <Button onClick={addChart} variant="primary"><i className='bx bx-cart-add'></i> Agregar al carrito</Button>
         <Button onClick={() => setCounter(counter - 1)}>-</Button>
           {counter}
           <Button onClick={() => setCounter(counter + 1)}>+</Button>
-      </Card.Body>
-    </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
